@@ -11,10 +11,15 @@ public class MaximumNumberTest {
     public void initialize() {
         maximumNumber =new MaximumNumber();
     }
-    //Test for Integer
+    //Test for integer
     @Test
     public void givenThreeInteger_ShouldReturnMaximumNumber(){
         Assert.assertEquals(Integer.valueOf(3),maximumNumber.getMaximum(1,2,3));
+    }
+    //Test for float
+    @Test
+    public void givenThreeFloat_ShouldReturnMaximumNumber(){
+        Assert.assertEquals(Double.valueOf(3.3),maximumNumber.getMaximum(1.1,2.2,3.3));
     }
 
 }
