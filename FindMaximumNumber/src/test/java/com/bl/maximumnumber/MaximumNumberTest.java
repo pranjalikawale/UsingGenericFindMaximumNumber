@@ -38,7 +38,7 @@ public class MaximumNumberTest {
     @Test
     public void givenThreeObjectToConstructor_ShouldReturnMaximumObject(){
         Assert.assertEquals(Integer.valueOf(3),new MaximumNumber(1,2,3).getMaximum());
-        Assert.assertEquals(Double.valueOf(3.3),new MaximumNumber(1.1,2.2,3.3).getMaximum());
-        Assert.assertEquals(String.valueOf("c"),new MaximumNumber("a","b","c").getMaximum());
+        Assert.assertEquals(Double.valueOf(3.3),new MaximumNumber(3.3,2.2,1.1).getMaximum());
+        Assert.assertEquals(String.valueOf("c"),new MaximumNumber("a","c","b").getMaximum());
     }
 }

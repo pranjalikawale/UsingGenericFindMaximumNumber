@@ -1,6 +1,6 @@
 package com.bl.maimumnumber;
 
-public class MaximumNumber<T extends Comparable<T>>{
+public class MaximumNumber<T extends Comparable>{
     //Variable declared
     private T a,b,c;
 
@@ -45,16 +45,26 @@ public class MaximumNumber<T extends Comparable<T>>{
      */
     //Compare object and return max
     public static <T extends Comparable<T>> Comparable<T> getMaximum(T a, T b, T c){
+        T max;
         if (a.compareTo(b)>0 && a.compareTo(c)>0 )
-            return a;
+            max=a;
         else if (b.compareTo(c)>0)
-            return b;
+            max=b;
         else
-            return c;
+            max=c;
+        printMax(max);
+        return max;
     }
 
     //Compare object and return max
     public <T extends Comparable<T>> Comparable<T> getMaximum(){
          return (Comparable<T>) getMaximum(a, b, c);
     }
+
+    //Print maximum
+    public static <T extends Comparable<T>> void printMax(T max){
+        System.out.println(max);
+    }
+
+
 }
