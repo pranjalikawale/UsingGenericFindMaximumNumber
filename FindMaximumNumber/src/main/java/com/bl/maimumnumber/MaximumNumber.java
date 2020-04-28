@@ -1,6 +1,20 @@
 package com.bl.maimumnumber;
 
 public class MaximumNumber<T extends Comparable<T>>{
+    //Variable declared
+    private T a,b,c;
+
+    //Default constructor
+    public MaximumNumber(){ }
+
+    //Parameterized constructor
+    public MaximumNumber(T a,T b,T c)
+    {
+        this.a=a;
+        this.b=b;
+        this.c=c;
+    }
+
     /*//Compare integer number and return max
     public static Integer getMaximum(Integer a,Integer b,Integer c){
         if (a.compareTo(b)>0 && a.compareTo(c)>0 )
@@ -38,5 +52,9 @@ public class MaximumNumber<T extends Comparable<T>>{
         else
             return c;
     }
-    
+
+    //Compare object and return max
+    public <T extends Comparable<T>> Comparable<T> getMaximum(){
+         return (Comparable<T>) getMaximum(a, b, c);
+    }
 }

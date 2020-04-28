@@ -7,6 +7,7 @@ import org.junit.Test;
 
 public class MaximumNumberTest {
     private MaximumNumber maximumNumber;
+    //Invoke default constructor
     @Before
     public void initialize() {
         maximumNumber =new MaximumNumber();
@@ -26,11 +27,18 @@ public class MaximumNumberTest {
     public void givenThreeString_ShouldReturnMaximumNumber(){
         Assert.assertEquals(String.valueOf("c"),maximumNumber.getMaximum("a","b","c"));
     }
-    //Test for string
+    //Test for Object
     @Test
     public void givenThreeObject_ShouldReturnMaximumObject(){
         Assert.assertEquals(Integer.valueOf(3),maximumNumber.getMaximum(1,2,3));
         Assert.assertEquals(Double.valueOf(3.3),maximumNumber.getMaximum(1.1,2.2,3.3));
         Assert.assertEquals(String.valueOf("c"),maximumNumber.getMaximum("a","b","c"));
+    }
+    //Test using parameterized constructor
+    @Test
+    public void givenThreeObjectToConstructor_ShouldReturnMaximumObject(){
+        Assert.assertEquals(Integer.valueOf(3),new MaximumNumber(1,2,3).getMaximum());
+        Assert.assertEquals(Double.valueOf(3.3),new MaximumNumber(1.1,2.2,3.3).getMaximum());
+        Assert.assertEquals(String.valueOf("c"),new MaximumNumber("a","b","c").getMaximum());
     }
 }
